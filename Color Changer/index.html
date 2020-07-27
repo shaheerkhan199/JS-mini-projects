@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color Changer</title>
+    <style>
+        
+        .box{
+            padding: 60px;
+            max-height: 350px;
+            max-width: 450px;
+            background-color: floralwhite;
+            border: 1px solid green;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Background color changer</h2>
+        <hr>
+        <label>Change Selected</label>
+        <select onchange="changeSelectedColor();" id="list">
+            <option value="" disabled selected>Select Value</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Purple">Purple</option>
+            <option value="Pink">Pink</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Red">Red</option>
+            <option value="Brown">Brown</option>
+        </select>
+        <br><br>
+        <label>Change Randomly</label>
+        <input type="button" value="Change Color" onclick="changeColorRandomly();">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

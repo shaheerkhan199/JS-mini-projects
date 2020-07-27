@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        input[type="text"]{
+            border:none;
+            outline:none;
+            font-size: 20px;
+            border-bottom: 5px solid orange;
+            text-align: center;
+            width: 10%;
+        }
+        input[type="text"]:focus{
+            color:red;
+            border-bottom: 5px solid black;
+        }
+        input[type="button"]{
+            background-color: red;
+            opacity: 0.7;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 10px;
+            font-size: 15px;
+            cursor: help;
+            border: 2px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1><u>Number Guess game</u></h1>
+    <div>
+        <p >Guess Number between 1 to 20</p>
+        <p>Remaining attempts: <span id="attempts">3</span></p>
+    </div>
+    <input type="text" placeholder="Your guess" id="answer">
+    <input type="button" value="Check answer" onclick="check_answer();">
+    <p id="hint"></p>
+    <a href="index.html">Restart Game</a>
+    <script src="app.js"></script>
+</body>
+</html>

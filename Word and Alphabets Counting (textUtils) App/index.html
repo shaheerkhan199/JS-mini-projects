@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utility App</title>
+    <style>
+        .box{
+            width: 70%;
+            border: 1px solid grey;
+            padding: 10px;
+            box-shadow:1px 2px 0px 4px grey;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: auto;
+        }
+        input[type="text"]{
+            height: 100px;
+            width: 70%;
+            outline:none;
+            border: none;
+            border: 1px solid lightgray;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        input[type="text"]:focus{
+            border:1px solid lightskyblue;
+        }
+        .btn{
+            border:none;
+            outline: none;
+            padding: 10px;
+            background-color: mediumaquamarine;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            border: 1px solid black;
+            transition: 1s;
+        }
+        .btn:hover{
+            background-color: orange;
+            color:black;
+            border:1px solid black;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Text utility App</h2>
+        <input type="text" id="textBox" placeholder="Write your text here...">
+        <br><br>
+        <input type="button" class="btn" onclick="countWordsAndAlphabets();" value="Count Words and Alphabets">
+        <input type="button" class="btn" onclick="convertIntoUpperCase();" value="Cappitalize Text">
+        <input type="button" class="btn" onclick="convertIntoLowerCase();" value="Lower Case">
+        <input type="button" class="btn" onclick="removeDuplicates();" value="Remove Duplicates">
+        <input type="button" class="btn" onclick="replacWords();" value="Replace Words">
+        <p id="textStats"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
