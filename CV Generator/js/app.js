@@ -71,6 +71,41 @@ function generate_more_qualifications(){
     console.log(mainQualifications);
 }
 function generate_cv(){
-    // console.log("CV is generated");
+    // Getting all the values from form.
+    var objective = document.getElementById("objective").value;
+    var fullName = document.getElementById("fullName").value;
+    var address = document.getElementById("address").value;
+    var email = document.getElementById("email").value;
+    var contact  = document.getElementById("phone").value;
+    var cnic = document.getElementById("cnic").value;
+    var dob = document.getElementById("dob").value;
+    var portfolio = document.getElementById("portfolio").value;
+    // Qualification 
+    var qinstName = document.getElementById("q1-name").value;
+    var qyear = document.getElementById("q1-year").value;
+    var qdegree = document.getElementById("q1-degree").value;
+    var qgrade = document.getElementById("q1-grade").value;
     
+    // Certifications
+    var cinstName = document.getElementById("c1-name").value;
+    var ccertificate = document.getElementById("c1-certificate").value;
+    var cduration = document.getElementById("c1-duration").value;
+    
+    // console.log(objective);
+    // console.log(fullName);
+    // console.log(address);
+    // console.log(email);
+    // console.log(contact);
+    // console.log(cnic);
+    // console.log(dob);
+    // console.log(portfolio)
+    // console.log(qinstName);
+    // console.log(qyear);
+    // console.log(qdegree);
+    // console.log(qgrade);
+    // console.log(cinstName);
+    // console.log(ccertificate);
+    // console.log(cduration);
+    
+    // Setting all the values to cv template
 }
