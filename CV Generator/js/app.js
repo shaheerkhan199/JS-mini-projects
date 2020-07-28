@@ -32,7 +32,6 @@ function generate_more_certifications(){
     console.log(mainCertifications);
 }
 function generate_more_qualifications(){
-    // console.log("Qualifications")
     var mainQualifications = document.getElementById("qualifications");
     
     var row = document.createElement("div");
@@ -70,4 +69,8 @@ function generate_more_qualifications(){
     row.appendChild(columnDiv)
     mainQualifications.appendChild(row);
     console.log(mainQualifications);
+}
+function generate_cv(){
+    // console.log("CV is generated");
+    
 }
