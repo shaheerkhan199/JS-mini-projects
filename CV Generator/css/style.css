@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 100%;
+    background-color: lightgrey;
+}
+.row{
+    margin-top: 10px !important;
+}
+.academic-qualifications input[type="text"]{
+    display: inline;
+    max-width: 24.7%;
+    box-sizing: border-box;
+    float: left;
+}
+.certifications input[type="text"]{
+    display: inline;
+    max-width: 33%;
+    float: left;
+    box-sizing: border-box;
+}

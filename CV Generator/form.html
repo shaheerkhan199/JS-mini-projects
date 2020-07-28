@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class=" text-center">Online CV Generator</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea class="form-control" placeholder="Objective"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Your Full Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Your Address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Your Contact Number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Your CNIC Number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="date" class="form-control" placeholder="Your Full Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="url" class="form-control" placeholder="Your Portfolio Link">
+                </div>
+            </div>
+            <!-- Academic Qualifications -->
+
+            <div id="qualifications">
+                <div class="row">
+                    <h3 class="ml-3">Academic Qualifications</h3>
+                    <div class="col-md-12 academic-qualifications">
+                        <input type="text" class="form-control" placeholder="Institute Name">
+                        <input type="text" class="form-control" placeholder="Year">
+                        <input type="text" class="form-control" placeholder="Degree">
+                        <input type="text" class="form-control" placeholder="Grade">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" onclick="generate_more_qualifications();" class="form-control btn btn-success"
+                        value="Add More">
+                </div>
+            </div>
+            <!-- Certifications -->
+            <div id="certifications">
+                <div class="row">
+                    <h3 class="ml-3">Certifications</h3>
+                    <div class="col-md-12 certifications">
+                        <input type="text" class="form-control" placeholder="Institute Name">
+                        <input type="text" class="form-control" placeholder="Certificate">
+                        <input type="text" class="form-control" placeholder="Duration">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" onclick="generate_more_certifications();" class="form-control btn btn-success"
+                        value="Add More">
+                </div>
+            </div>
+            <!-- Technology -->
+            <!-- <div class="row">
+                <h3 class="ml-3">Technology</h3>
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Your Portfolio Link">
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" class="form-control btn btn-danger" value="Generate CV">
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
