@@ -108,4 +108,61 @@ function generate_cv(){
     // console.log(cduration);
     
     // Setting all the values to cv template
+    document.getElementById("templateFullName").innerHTML = fullName;
+    document.getElementById("templateObjective").innerHTML = objective;
+    document.getElementById("templateEmail").innerHTML = email;
+    document.getElementById("templatePhone").innerHTML = contact;
+    document.getElementById("templateAddress").innerHTML = address;
+    document.getElementById("templateCNIC").innerHTML = cnic;
+    document.getElementById("templateDOB").innerHTML = dob;
+    document.getElementById("templatePortfolio").innerHTML = portfolio;
+    
+    // Setting academic qualifications
+    var qualificationsTable = document.getElementById("qualificationsTable");
+    var table1Row = document.createElement("tr");
+    var column0 = document.createElement("td");
+    var column1 = document.createElement("td");
+    var column2 = document.createElement("td");
+    var column3 = document.createElement("td");
+    var column4 = document.createElement("td");
+    column0.appendChild(document.createTextNode("1"));
+    column1.appendChild(document.createTextNode(qinstName));
+    column2.appendChild(document.createTextNode(qyear));
+    column3.appendChild(document.createTextNode(qdegree));
+    column4.appendChild(document.createTextNode(qgrade));
+    table1Row.appendChild(column0);
+    table1Row.appendChild(column1);
+    table1Row.appendChild(column2);
+    table1Row.appendChild(column3);
+    table1Row.appendChild(column4);
+    // console.log(tableRow);
+    qualificationsTable.appendChild(table1Row);
+
+    // Setting Certifications
+    var certificationsTable = document.getElementById("certificationsTable");
+    var table2Row = document.createElement("tr");
+    var column0 = document.createElement("td");
+    var column1 = document.createElement("td");
+    var column2 = document.createElement("td");
+    var column3 = document.createElement("td");
+    column0.appendChild(document.createTextNode("1"));
+    column1.appendChild(document.createTextNode(cinstName));
+    column2.appendChild(document.createTextNode(ccertificate));
+    column3.appendChild(document.createTextNode(cduration));
+    table2Row.appendChild(column0);
+    table2Row.appendChild(column1);
+    table2Row.appendChild(column2);
+    table2Row.appendChild(column3);
+    // console.log(tableRow);
+    certificationsTable.appendChild(table2Row);
+    
+
+
+    // Hiding form and generating cv on cv template
+    var formWrapper = document.getElementById("formWrapper");
+    var cvWrapper = document.getElementById("cvWrapper");
+    formWrapper.style.display = "none";
+    cvWrapper.style.display = "block";
+
+
 }

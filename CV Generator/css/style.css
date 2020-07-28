@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
-.wrapper{
+#formWrapper{
     width: 100%;
     background-color: lightgrey;
 }
@@ -33,4 +33,8 @@ table tr,td{
 }
 table thead{
     background-color: lightgray;
+}
+
+#cvWrapper{
+    display: none;
 }

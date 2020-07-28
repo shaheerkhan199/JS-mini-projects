@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="formWrapper">
         <h1 class=" text-center">Online CV Generator</h1>
         <div class="container">
             <div class="row">
@@ -106,6 +106,46 @@
         </div>
     </div>
 
+    <!-- CV template -->
+    <div class="container border border-dark bg-light" id="cvWrapper">
+        <h1 class="text-center" id="templateFullName"></h1>
+        <h4>Objective:</h4>
+        <p class="text-justify" id="templateObjective"></p>
+        <h4>Personal Details:</h4>
+        <p>Email: <span id="templateEmail"></span></p>
+        <p>Phone: <span id="templatePhone"></span></p>
+        <p>Address: <span id="templateAddress"></span></p>
+        <p>CNIC: <span id="templateCNIC"></span></p>
+        <p>Date of Birth: <span id="templateDOB"></span></p>
+        <p>Portfolio: <a href="#"><span id="templatePortfolio"></span></a></p>
+        <h4>Academic Qualifications:</h4>
+        <table border="1" id="qualificationsTable">
+                <thead>
+                <tr>
+                    <td>S.no </td>
+                    <td>Name</td>
+                    <td>Year</td>
+                    <td>Degree</td>
+                    <td>Grade</td>
+                </tr>
+            </thead>
+                
+        </table>
+        <h4>Certifications:</h4>
+        <table border="1" id="certificationsTable">
+            <thead>
+                <tr>
+                    <td>S.no </td>
+                    <td>Name</td>
+                    <td>Certificate</td>
+                    <td>Duration</td>
+                </tr>
+            </thead>
+            
+        </table>
+        <h4>Reference:</h4>
+        <p>Refrence will be furnished upon request..</p>
+    </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 </body>
