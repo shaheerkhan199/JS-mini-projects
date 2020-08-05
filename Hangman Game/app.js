@@ -25,14 +25,16 @@ function start_game() {
     console.log(list_of_random_num);
     // Generating Textboxes and append each character to text box
     // console.log(length_of_word);
+    var counter = 0;
     for (var i = 0; i < length_of_word; i++) {
         var textBox = document.createElement("input");
         textBox.setAttribute("type", "text");
-        if (i <= half_length) {
+        if (i == list_of_random_num[counter]) {
+            textBox.setAttribute("value", "");
+            counter++;
+        } else {
             textBox.setAttribute("value", random_word[i]);
             textBox.setAttribute("disabled", "true");
-        } else {
-            textBox.setAttribute("value", "");
         }
         boxDiv.appendChild(textBox);
     }
