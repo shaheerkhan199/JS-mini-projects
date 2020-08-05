@@ -1,17 +1,12 @@
 var random_word;
 function start_game() {
     var boxDiv = document.getElementById("boxes");
-    var words = ["TREE", "OCEAN", "PARADISE", "HOUSE", "RIVER", "TOYOTA", "COUNTRY", "WORLD"];
+    var words = ["MOBILE","TREE", "OCEAN", "PARADISE", "HOUSE", "RIVER", "TOYOTA", "COUNTRY", "WORLD"];
     // Generating random number in order to access random word from array
     const random_num = Math.floor(Math.random() * words.length);
     random_word = words[random_num];
     var length_of_word = random_word.length;
-    // document.write(random_word);
-    // console.log(random_num);
-    // console.log(random_word);
-    // console.log(boxDiv);
     var half_length = Math.floor(length_of_word / 2);
-    console.log(half_length);
     // Generating a list of random numbers(half length of word) to Randomly remove characters from textbox
     var list_of_random_num = [];
     while (list_of_random_num.length < half_length) {
@@ -22,9 +17,7 @@ function start_game() {
         }
     }
     list_of_random_num.sort();
-    console.log(list_of_random_num);
     // Generating Textboxes and append each character to text box
-    // console.log(length_of_word);
     var counter = 0;
     for (var i = 0; i < length_of_word; i++) {
         var textBox = document.createElement("input");
@@ -40,17 +33,33 @@ function start_game() {
     }
     var check_button = document.createElement("button");
     check_button.innerHTML = "Check";
+    check_button.setAttribute("onclick", "check_guess()");
     boxDiv.appendChild(check_button);
 }
 
 start_game();
-
+var limit = 3;
 function check_guess() {
-
+    console.log("hello");
+    var textBoxes = document.getElementsByTagName("input");
+    var user_guessed = "";
+    for(var i=0; i<textBoxes.length; i++){
+        var char = textBoxes[i].value.toUpperCase();
+        user_guessed += char;
+    }
+    // console.log(user_guessed);
+    // console.log(random_word);
+    if(user_guessed === random_word){
+        alert("You won!!!!!");
+    }else{
+        alert("Your lost");
+        limit--;
+    }
+    console.log(limit);
+    // start_game();
 }
+
+// Function to generate a random number within a specific range lower and upper bound passed as a parameter to function
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
-
-//   var r =randomNumber(1,10);
-// console.log(r);
