@@ -1,7 +1,7 @@
 var random_word;
 function start_game() {
     var boxDiv = document.getElementById("boxes");
-    var words = ["MOBILE","TREE", "OCEAN", "PARADISE", "HOUSE", "RIVER", "TOYOTA", "COUNTRY", "WORLD"];
+    var words = ["MOBILE", "TREE", "OCEAN", "PARADISE", "HOUSE", "RIVER", "TOYOTA", "COUNTRY", "WORLD"];
     // Generating random number in order to access random word from array
     const random_num = Math.floor(Math.random() * words.length);
     random_word = words[random_num];
@@ -11,8 +11,7 @@ function start_game() {
     var list_of_random_num = [];
     while (list_of_random_num.length < half_length) {
         var randomNum = getRandomNumber(0, length_of_word);
-        if (list_of_random_num.indexOf(randomNum) === -1)
-        {
+        if (list_of_random_num.indexOf(randomNum) === -1) {
             list_of_random_num.push(randomNum);
         }
     }
@@ -39,19 +38,22 @@ function start_game() {
 
 start_game();
 var limit = 3;
+var alertPara = document.getElementById("alert");
 function check_guess() {
     console.log("hello");
     var textBoxes = document.getElementsByTagName("input");
     var user_guessed = "";
-    for(var i=0; i<textBoxes.length; i++){
+    for (var i = 0; i < textBoxes.length; i++) {
         var char = textBoxes[i].value.toUpperCase();
         user_guessed += char;
     }
     // console.log(user_guessed);
     // console.log(random_word);
-    if(user_guessed === random_word){
-        alert("You won!!!!!");
-    }else{
+    if (user_guessed === random_word) {
+        // alert("You won!!!!!");
+        alertPara.innerHTML = "You Won......!";
+        alertPara.style.color = "green";
+    } else {
         alert("Your lost");
         limit--;
     }

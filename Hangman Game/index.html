@@ -7,9 +7,10 @@
     <title>Hangman Game</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        h1{
+        h1 {
             font-family: 'Courier New', Courier, monospace;
         }
+
         input[type="text"] {
             border: none;
             outline: none;
@@ -23,13 +24,15 @@
             font-weight: bolder;
             text-transform: uppercase;
         }
-        input[type="text"]:focus{
+
+        input[type="text"]:focus {
             background-color: palegreen;
         }
-        button{
+
+        button {
             display: block;
             /* margin-top: 10px; */
-            margin:10px auto;
+            margin: 10px auto;
             width: 30%;
             padding: 10px;
             background-color: brown;
@@ -40,25 +43,30 @@
             border-radius: 5px;
             cursor: help;
         }
-       #boxes{
+
+        #boxes {
             border: 3px solid steelblue;
             width: 35%;
             text-align: center;
             /* align-items: center; */
             margin: auto;
         }
+        p{
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div id="boxes">
-    <h1>Hangman Game</h1>
-    <p>Your Limit: <span id="limit">03</span></p>
-    <hr>
-    
+        <h1>Hangman Game</h1>
+        <p>Your Limit: <span id="limit">03</span></p>
+        <hr>
+
 
     </div>
-    
+    <p id="alert"></p>
+
     <script src="app.js"></script>
 </body>
 
