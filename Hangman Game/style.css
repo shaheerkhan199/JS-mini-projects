@@ -1,3 +1,10 @@
+body{
+    background-image: url('background3.jpg');
+    background-size: contain;
+}
+#boxes{
+    background-color: white;
+}
 h1 {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -15,6 +22,7 @@ input[type="text"] {
     font-weight: bolder;
     text-transform: uppercase;
 }
+
 
 input[type="text"]:focus {
     background-color: palegreen;

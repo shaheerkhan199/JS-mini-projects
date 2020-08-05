@@ -73,6 +73,7 @@ function check_guess() {
 
         // Adding restart game button when user complete all limits
         boxDiv.appendChild(restart_button);
+        check_button.disabled = true;
     }
 
 
