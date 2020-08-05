@@ -1,6 +1,7 @@
 var random_word;
+var check_button;
+var boxDiv = document.getElementById("boxes");
 function start_game() {
-    var boxDiv = document.getElementById("boxes");
     var words = ["MOBILE", "TREE", "OCEAN", "PARADISE", "HOUSE", "RIVER", "TOYOTA", "COUNTRY", "WORLD"];
     // Generating random number in order to access random word from array
     const random_num = Math.floor(Math.random() * words.length);
@@ -30,7 +31,7 @@ function start_game() {
         }
         boxDiv.appendChild(textBox);
     }
-    var check_button = document.createElement("button");
+    check_button = document.createElement("button");
     check_button.innerHTML = "Check";
     check_button.setAttribute("onclick", "check_guess()");
     boxDiv.appendChild(check_button);
@@ -39,26 +40,42 @@ function start_game() {
 start_game();
 var limit = 3;
 var alertPara = document.getElementById("alert");
+var limitSpan = document.getElementById("limit");
 function check_guess() {
-    console.log("hello");
+    // Creating restart button 
+    restart_button = document.createElement("a");
+    restart_button.innerHTML = "Restart Game";
+    restart_button.setAttribute("href", "index.html");
+
     var textBoxes = document.getElementsByTagName("input");
     var user_guessed = "";
-    for (var i = 0; i < textBoxes.length; i++) {
-        var char = textBoxes[i].value.toUpperCase();
-        user_guessed += char;
-    }
-    // console.log(user_guessed);
-    // console.log(random_word);
-    if (user_guessed === random_word) {
-        // alert("You won!!!!!");
-        alertPara.innerHTML = "You Won......!";
-        alertPara.style.color = "green";
+    if (limit != 0) {
+        for (var i = 0; i < textBoxes.length; i++) {
+            var char = textBoxes[i].value.toUpperCase();
+            user_guessed += char;
+        }
+        if (user_guessed === random_word) {
+            limit--;
+            limitSpan.innerHTML = "0" + limit;
+            alertPara.innerHTML = "You Won......!";
+            alertPara.style.color = "green";
+            boxDiv.appendChild(restart_button);
+        } else {
+            alertPara.innerHTML = "Wrong guess! Try again";
+            alertPara.style.color = "brown";
+            limit--;
+            limitSpan.innerHTML = "0" + limit;
+        }
     } else {
-        alert("Your lost");
-        limit--;
+        alertPara.innerHTML = "You have reached your max attempts"
+        alertPara.style.color = "red";
+        check_button.style.backgroundColor = "black";
+
+        // Adding restart game button when user complete all limits
+        boxDiv.appendChild(restart_button);
     }
-    console.log(limit);
-    // start_game();
+
+
 }
 
 // Function to generate a random number within a specific range lower and upper bound passed as a parameter to function
