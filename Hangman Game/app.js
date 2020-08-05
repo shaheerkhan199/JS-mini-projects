@@ -12,17 +12,16 @@ function start_game() {
     // console.log(boxDiv);
     var half_length = Math.floor(length_of_word / 2);
     console.log(half_length);
-    // Randomly remove characters from textbox
+    // Generating a list of random numbers(half length of word) to Randomly remove characters from textbox
     var list_of_random_num = [];
-    for (j = 1; j <= half_length; j++) {
-        // console.log("random char");
-        if (getRandomNumber(0, length_of_word) != list_of_random_num[i]) {
-            list_of_random_num.push(getRandomNumber(0, length_of_word));
-
-        } else {
-            list_of_random_num.push(getRandomNumber(0, length_of_word));
+    while (list_of_random_num.length < half_length) {
+        var randomNum = getRandomNumber(0, length_of_word);
+        if (list_of_random_num.indexOf(randomNum) === -1)
+        {
+            list_of_random_num.push(randomNum);
         }
     }
+    list_of_random_num.sort();
     console.log(list_of_random_num);
     // Generating Textboxes and append each character to text box
     // console.log(length_of_word);
