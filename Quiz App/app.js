@@ -1,3 +1,11 @@
+var nextBtn = document.getElementById("nextBtn");
+window.onload = disable_button();
+function disable_button(){
+    nextBtn.style.display = "none";
+}
+function enable_button(){
+    nextBtn.style.display = "block";
+}
 var questions = [
     {
         question: "What is the capital of America?",
@@ -63,9 +71,9 @@ function start_quiz() {
     option4Label.innerHTML = questions[counter].option4;
 }
 start_quiz();
+
 var user_answer;
 var marks = 0;
-var nextBtn = document.getElementById("nextBtn");
 
 function check_question() {
     // Cheching whether the user answer the correctly or not
@@ -75,11 +83,8 @@ function check_question() {
         user_answer = option2Radio.value;
     }else if(option3Radio.checked){
         user_answer = option3Radio.value;
-    }else if(option3Radio.checked){
-        user_answer = option4Radio.value;
     }else{
-        nextBtn.disabled = true;
-        alert("")
+        user_answer = option4Radio.value;
     }
 
     if(user_answer === questions[counter].rightAnswer){
@@ -107,3 +112,4 @@ function show_next_question(){
         console.log("Your marks is "+marks);
     }
 }
+
