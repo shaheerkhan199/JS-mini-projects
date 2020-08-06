@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            text-align: center;
+        }
+        .box{
+            border: 3px solid gray;
+            height: auto;
+            width: 70%;
+            padding: 50px;
+            margin: auto;
+        }
+        input[type="button"]{
+            border: 1px solid black;
+            background-color: #20b2aa;
+            outline: none;
+            color: white;
+            padding: 10px;
+            width: 100px;
+            cursor: pointer;
+            font-size: 13px;
+            float: right;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Simple Quiz App</h1>
+    <div class="box">
+        <p id="questionPara"></p>
+        <input type="radio" id="option1" name="option"><label id="option1Label"></label><br>
+        <input type="radio" id="option2" name="option"><label id="option2Label"></label><br>
+        <input type="radio" id="option3" name="option"><label id="option3Label"></label><br>
+        <input type="radio" id="option4" name="option"><label id="option4Label"></label><br>
+        <input type="button" value="Next" onclick="show_next_question();">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
