@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz App</title>
     <style>
         body{
             margin: 0;
@@ -36,18 +36,38 @@
             font-size: large;
             font-weight: bolder;
         }
+        #result{
+            background-color: lightblue;
+            height: auto;
+            width: 50%;
+            text-align: center;
+            border: 2px solid black;
+            margin: auto;
+            display: none;
+            padding: 10px;
+        }
+        a{
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 5px;
+        }
     </style>
 
 </head>
 <body>
     <h1>Simple Quiz App</h1>
-    <div class="box">
+    <div class="box" id="box">
         <p id="questionPara"></p>
         <input type="radio" id="option1" name="option"><label for="option1" id="option1Label"></label><br>
         <input type="radio" id="option2" name="option"><label for="option2" id="option2Label"></label><br>
         <input type="radio" id="option3" name="option"><label for="option3" id="option3Label"></label><br>
         <input type="radio" id="option4" name="option"><label for="option4" id="option4Label"></label><br>
         <input type="button" value="Next" id="nextBtn" onclick="check_question();">
+    </div>
+    <div id="result">
+
     </div>
 
     <script src="app.js"></script>

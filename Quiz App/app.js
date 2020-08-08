@@ -1,11 +1,11 @@
 var nextBtn = document.getElementById("nextBtn");
-window.onload = disable_button();
-function disable_button(){
-    nextBtn.style.display = "none";
-}
-function enable_button(){
-    nextBtn.style.display = "block";
-}
+// window.onload = disable_button();
+// function disable_button(){
+//     nextBtn.style.display = "none";
+// }
+// function enable_button(){
+//     nextBtn.style.display = "block";
+// }
 var questions = [
     {
         question: "What is the capital of America?",
@@ -83,8 +83,11 @@ function check_question() {
         user_answer = option2Radio.value;
     }else if(option3Radio.checked){
         user_answer = option3Radio.value;
-    }else{
+    }else if(option4Radio.checked){
         user_answer = option4Radio.value;
+    }else{
+        // dont move to next question if user not select any option and directly return from here 
+        return "";
     }
 
     if(user_answer === questions[counter].rightAnswer){
@@ -108,8 +111,18 @@ function show_next_question(){
         counter++;
         start_quiz();
     } else {
-        console.log("Quiz end");
-        console.log("Your marks is "+marks);
+        // Generating result card
+        var mainDiv = document.getElementById("box");
+        mainDiv.style.display = "none";
+        var resultDiv = document.getElementById("result");
+        resultDiv.style.display = "block";
+        var resultNote = document.createElement("h2");
+        resultNote.innerHTML = "Quiz is end and Your score is "+marks;
+        resultDiv.appendChild(resultNote);
+        var retakeButton = document.createElement("a");
+        retakeButton.innerHTML = "Retake Quiz";
+        retakeButton.setAttribute("href","index.html");
+        resultDiv.appendChild(retakeButton);
     }
 }
 
