@@ -6,29 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker app</title>
     <link rel="stylesheet" href="css/style.css">
-    
+
 </head>
 
 <body>
+    <div id="start">
+        <h1>Expense Tracking Application</h1>
+        <input type="number" id="totalIncome">
+        <input type="button" value="Start Tracking" onclick="show_board();">
+    </div>
+
     <div id="box">
         <div id="header">
             <h2>Expense tracker App</h2>
             <div id="circle">
                 <span id="income">25000</span>
             </div>
-            <div id="bodyDiv">
-                <input type="text" id="expenseName" placeholder="Task name">
-                <input type="number" id="expenseAmount" min="1" placeholder="Expense">
-                <input type="button" value="Record Expense" onclick="add_expense();">
-                <hr>
-                <table id="table">
-
-                </table>
-            </div>
-
-
         </div>
-
+        <div id="bodyDiv">
+            <input type="text" id="expenseName" placeholder="Task name">
+            <input type="number" id="expenseAmount" min="1" placeholder="Expense">
+            <input type="button" value="Record Expense" onclick="add_expense();">
+            <hr>
+            <div id="tableDiv"> 
+                <table id="table">
+                    <tr>
+                        <th>S. No</th>
+                        <th>Expense</th>
+                        <th>Amount</th>
+                    </tr>
+            </div>
+            </table>
+        </div>
+        <div id="footer">
+            <p>
+                <span id="total">Total: 0</span>
+            </p>
+        </div>
 
     </div>
 

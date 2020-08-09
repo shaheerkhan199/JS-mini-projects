@@ -1,6 +1,18 @@
 var sNo = 1;
+var totalIncome;
+var incomeSpan = document.getElementById("income");
+var boardBox = document.getElementById("box");
+var startBox = document.getElementById("start");
+function show_board(){
+    var incomeTextBox = document.getElementById("totalIncome");
+    totalIncome = incomeTextBox.value;
+    // console.log(boardBox);
+    console.log(incomeSpan);
+    incomeSpan.innerHTML = totalIncome;
+    startBox.style.display = "none";
+    boardBox.style.display = "block";
+}
 function add_expense(){
-    var totalIncome = 25000;
     var expenseName = document.getElementById("expenseName");
     var expenseAmount = document.getElementById("expenseAmount");
     var table = document.getElementById("table");
@@ -17,5 +29,7 @@ function add_expense(){
     table.appendChild(row);
     expenseName.value = "";
     expenseAmount.value = "";
+    totalIncome = totalIncome-expenseAmount;
+    incomeSpan.innerHTML = totalIncome;
     sNo++;
 }
