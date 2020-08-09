@@ -17,7 +17,7 @@ var questions = [
     },
     {
         question: "What is the current prime minister of Pakistan?",
-        option1: "Johny Sins",
+        option1: "Asif Zardari",
         option2: "Imran khan",
         option3: "Rehman Malik",
         option4: "Altaf bhai",
@@ -30,6 +30,22 @@ var questions = [
         option3: "Women Health Organization",
         option4: "None of the above",
         rightAnswer: "World Health Organization",
+    },
+    {
+        question: "Which one is not an operating system?",
+        option1: "Microsoft windows",
+        option2: "Linux (Ubuntu)",
+        option3: "MAC os",
+        option4: "Visual Studio Code",
+        rightAnswer: "Visual Studio Code",
+    },
+    {
+        question: "1GB is equal to?",
+        option1: "1024 MB",
+        option2: "2000 KB",
+        option3: "1 TB",
+        option4: "None of the abve",
+        rightAnswer: "1024 MB",
     },
 ];
 
@@ -94,7 +110,7 @@ function check_question() {
         marks++;
     }
    
-    // 
+    // showing next question
     show_next_question();
 
     // Unchecking all radion button
@@ -119,9 +135,9 @@ function show_next_question(){
         var resultNote = document.createElement("h2");
         resultNote.innerHTML = "Quiz is end and Your score is "+marks;
         resultDiv.appendChild(resultNote);
-        var retakeButton = document.createElement("a");
+        var retakeButton = document.createElement("button");
         retakeButton.innerHTML = "Retake Quiz";
-        retakeButton.setAttribute("href","index.html");
+        retakeButton.setAttribute("onclick","window.location='index.html'");
         resultDiv.appendChild(retakeButton);
     }
 }
