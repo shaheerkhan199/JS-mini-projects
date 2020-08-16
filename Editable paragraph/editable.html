@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]{
+            height: 50px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <p id="para">Double click on me to edit this text</p>
+    </div>
+    <script>
+        function saveData(){
+            paraElement.innerHTML = textBox.value;
+            textBox.style.display = "none";
+            saveBtn.style.display = "none";
+            paraElement.style.display = "block";
+        }
+        var paraElement = document.getElementById("para");
+        var containerDiv = document.getElementById("container");
+        var textBox, saveBtn;
+        paraElement.ondblclick = function(){
+            textBox = document.createElement("input");
+            textBox.setAttribute("type", "text");
+            textBox.setAttribute("value", paraElement.innerHTML);
+            saveBtn = document.createElement("button");
+            saveBtn.innerHTML = "Save";
+            saveBtn.setAttribute("onclick", "saveData()");
+            paraElement.style.display = "none";
+            containerDiv.appendChild(textBox);
+            containerDiv.appendChild(saveBtn);
+        }
+        
+    </script>
+</body>
+</html>
